@@ -22,4 +22,9 @@ public class UIController : MonoBehaviour
         // show a "You win" screen, load credits, go back to the menu, etc.
         SceneManager.LoadScene(0);
     }
+
+    public void OnPlayGame()
+    {
+        LevelLoader.LoadLevelSelect();
+    }
 }

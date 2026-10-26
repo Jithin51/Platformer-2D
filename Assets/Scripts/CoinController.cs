@@ -7,6 +7,7 @@ public class CoinController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             AudioManager.Instance.PlaySFX("Coin");
+            LevelSession.Instance.AddCoin();
             Destroy(gameObject);
         }
     }

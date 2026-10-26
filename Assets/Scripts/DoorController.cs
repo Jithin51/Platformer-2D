@@ -9,7 +9,8 @@ public class DoorController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             AudioManager.Instance.PlaySFX("Level");
-            levelCompletePanel.SetActive(true);
+            LevelSession.Instance.CompleteLevel();
+            //levelCompletePanel.SetActive(true);
             Destroy(collision.gameObject);
         }
     }
